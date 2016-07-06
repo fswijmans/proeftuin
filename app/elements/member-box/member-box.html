@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../squad-member/squad-member.html">
+<link rel="import" href="../my-list/my-list.html">
+
+<dom-module id="member-box">
+    <template>
+        <template is="dom-repeat" items="{{members}}">
+            <squad-member name="{{item.name}}" age="{{item.age}}"></squad-member>
+        </template>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'member-box',
+            ready: function () {
+                this.members = [
+                    {name: 'Jelle', age: '24'},
+                    {name: 'Frank', age: '25'},
+                    {name: 'Henk', age: '99'},
+                    {name: 'Jelle', age: '24'},
+                    {name: 'Frank', age: '25'},
+                    {name: 'Henk', age: '99'},
+                    {name: 'Jelle', age: '24'},
+                    {name: 'Frank', age: '25'},
+                    {name: 'Henk', age: '99'}
+                ];
+            }
+        });
+    </script>
+</dom-module>

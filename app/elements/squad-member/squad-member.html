@@ -1,5 +1,4 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
 
 <dom-module id="squad-member">
@@ -12,30 +11,29 @@
       .box-frame {
         border-style: solid;
         border-color: #0b97c4;
-        border-width: 20px;
+        border-width: 5px;
         height: 200px;
         width: 200px;
+        margin: 3px;
       }
     </style>
 
-    <div class="box-frame">
-      <h1>This is a squad member!</h1>
-      <iron-image style="width: 150px; height: 150px" sizing="contain" src="../../images/members/memberX.png"></iron-image>
-      <h2>{{imageUrl}} & some dummy text</h2>
+    <div class="box-frame" style="float: left;">
+      <h1>Name: {{name}} & age: {{age}}</h1>
+      <iron-image style="width: 100px; height: 100px" sizing="cover" src="../../images/members/memberX.png"></iron-image>
+
     </div>
   </template>
 
   <script>
-    (function() {
-      'use strict';
-
       Polymer({
         is: 'squad-member',
 
         properties: {
-          imageUrl: String
+          name: String,
+          age: String
         }
+
       });
-    })();
   </script>
 </dom-module>
